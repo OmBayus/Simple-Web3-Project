@@ -1,0 +1,1 @@
+export {useAddresses} from "./useAddresses"
