@@ -9,9 +9,12 @@ const Main = ()=>{
 
     return(
         <>
-            {addreses.map((item,index)=>(<div key={index}>
-                    <span>{item.address}</span>:<span>{item.number}</span>
-                </div>))}
+            <h1>Addresses with their number:</h1>
+            {addreses.map((item,index)=>(
+                <div key={index}>
+                        <h3>{item.address}:{item.number}</h3>
+                </div>
+            ))}
         </>
     )
 
