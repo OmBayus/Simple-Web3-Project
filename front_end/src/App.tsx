@@ -26,7 +26,6 @@ const config: Config = {
 
   
 const App = ()=>{
-
     return(
     <DAppProvider config={config}>
       <ScrollToTop/>

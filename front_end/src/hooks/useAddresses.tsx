@@ -24,13 +24,16 @@ export const useAddresses = ()=>{
       )
       
       const len = await simpleContract.getaAdressesLen()
-      const temp:AddressToNumber[] = []
+      var temp:AddressToNumber[] = []
       for (let i = 0; i < Number(len); i++) {
         const address = await simpleContract.addresses(i)
         const number = await simpleContract.addressToNumber(address.toString())
-        temp.push({address,number:Number(number)})
-
+        if(temp.filter(e => e.address === address).length === 0){
+          temp.push({address,number:Number(number)})
+        }
+        
       }
+
       setAddresses(temp)
       
     }

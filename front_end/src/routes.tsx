@@ -2,6 +2,7 @@ import { Navigate, useRoutes } from 'react-router-dom';
 
 //routes
 import Main from './components/Main';
+import SetNumber from './components/SetNumber';
 
 export default function Router() {
   return useRoutes([
@@ -19,6 +20,7 @@ export default function Router() {
         // { path: 'login', element: <Login /> },
         // { path: '404', element: <NotFound /> },
         { path: '/', element: <Navigate to="/" /> },
+        { path: '/setnumber', element: <SetNumber /> },
         { path: '*', element: <Navigate to="/404" /> }
       ]
     },
