@@ -13,7 +13,8 @@ The website is designed to use the basics of web3. The website shows addresses w
 
 ## Preview
 
-<img src="https://drive.google.com/uc?export=view&id=1YtZMw7XExjGwAXQ1_iwBhPmMDfDn7QoE"/>
+<a href="https://drive.google.com/uc?export=view&id=1YtZMw7XExjGwAXQ1_iwBhPmMDfDn7QoE"><img src="https://drive.google.com/uc?export=view&id=1YtZMw7XExjGwAXQ1_iwBhPmMDfDn7QoE" style="width: 500px; max-width: 100%; height: auto" title="Click for the larger version." /></a>
+
 
 ## Technologies used:
 
