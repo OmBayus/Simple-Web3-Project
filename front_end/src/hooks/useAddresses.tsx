@@ -24,21 +24,23 @@ export const useAddresses = ()=>{
       )
       
       const len = await simpleContract.getaAdressesLen()
-      var temp:AddressToNumber[] = []
+      setAddresses([])
+      
       for (let i = 0; i < Number(len); i++) {
         const address = await simpleContract.addresses(i)
         const number = await simpleContract.addressToNumber(address.toString())
-        if(temp.filter(e => e.address === address).length === 0){
-          temp.push({address,number:Number(number)})
-        }
+        
+        setAddresses(prevValue=>{
+          if(prevValue.filter(e=>e.address === address).length === 0)
+            return [...prevValue,{address,number:Number(number)}]
+          return prevValue
+        })
         
       }
-
-      setAddresses(temp)
       
     }
 
-    const [addreses,setAddresses] = useState<AddressToNumber[]>([])
+    const [addreses,setAddresses] = useState<AddressToNumber[]>([{address:"...",number:0},{address:"...",number:0},{address:"...",number:0},{address:"...",number:0}])
     
     useEffect(()=>{
       get()
