@@ -37,7 +37,7 @@ export default function SetNumber(){
 
     useEffect(()=>{
         console.log(setNumberState)
-        if(setNumberState.status == "Success"){
+        if(setNumberState.status === "Success"){
             setShowSnackBar(true)
         }
     },[setNumberState])

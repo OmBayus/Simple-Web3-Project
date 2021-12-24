@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import ScrollToTop from "./components/ScrollToTop";
 import Router from "./routes";
 import { ChainId, DAppProvider, Config } from '@usedapp/core'
+import Footer from "./components/Footer";
 
 const config: Config = {
   readOnlyChainId: ChainId.Kovan,
@@ -31,6 +32,7 @@ const App = ()=>{
       <ScrollToTop/>
       <Header/>
       <Router/>
+      <Footer/>
     </DAppProvider>
 
     )

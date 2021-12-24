@@ -43,12 +43,14 @@ export const useChangeNumber = ()=>{
 
     useEffect(()=>{
       get()
+      // eslint-disable-next-line
     },[account])
 
     useEffect(()=>{
         if(setNumberState.status === "Success"){
             get()
         }
+        // eslint-disable-next-line
     },[setNumberState])
 
     
